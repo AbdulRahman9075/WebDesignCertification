@@ -1,8 +1,8 @@
 # WebDesignCertification
 
-## Deployed Link: *https://mywebdesignportfolio.netlify.app/*
+### (Deployed Link)[https://mywebdesignportfolio.netlify.app/]
 
-## My Certificate: *https://www.freecodecamp.org/certification/AbdulRahman9075/responsive-web-design*
+### (My Certificate)[https://www.freecodecamp.org/certification/AbdulRahman9075/responsive-web-design]
 
 This website is a portfolio page and the last of the 5 projects required to gain this certification and showcases the following 4 projects:
 
