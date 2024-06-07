@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Accessibility Documentation">
+    <link rel="stylesheet" href="./styles3.css">
+    <title>Web Accessibility</title>
+  </head>
+
+  <body>
+    <nav id="navbar">
+        <header> Accessibility Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Semantic_HTML_Elements">Semantic HTML Elements</a>
+        <a class="nav-link" href="#HTML_Images">HTML Images</a>
+        <a class="nav-link" href="#Styling_Links">Styling Links</a>
+        <a class="nav-link" href="#Content_Highlighting">Content Highlighting</a>
+        <a class="nav-link" href="#Screen_Reader_Accessible_Content">Screen Reader Accessible Content</a>
+        <a class="nav-link" href="#Screen_Reader_Only_Content">Screen Reader Only Content</a>
+        <a class="nav-link" href="#Reference">Reference</a>
+        
+    </nav>
+    <div class="border"></div>
+    <main id="main-doc">
+      <section class="main-section" role="region" id="Introduction">
+        <header>Introduction</header>
+        <p>Accessibility is the practice of making your websites usable by as many people as possible. We traditionally think of this as being about people with disabilities, but the practice of making sites accessible also benefits other groups such as those using mobile devices, or those with slow network connections.</p>
+
+        <p>You might also think of accessibility as treating everyone the same, and giving them equal opportunities, no matter what their ability or circumstances. Just as it is wrong to exclude someone from a physical building because they are in a wheelchair (modern public buildings generally have wheelchair ramps or elevators), it is also not right to exclude someone from a website because they have a visual impairment. We are all different, but we are all human, and therefore have the same human rights.</p>
+
+        <p>Accessibility is the right thing to do. Providing accessible sites is part of the law in some countries, which can open up some significant markets that otherwise would not be able to use your services or buy your products.</p>
+        <p>Building accessible sites benefits everyone:</p>
+        <ul>
+          <li>Semantic HTML, which improves accessibility, also improves SEO, making your site more findable.</li>
+
+          <li>Caring about accessibility demonstrates good ethics and morals, which improves your public image.</li>
+
+          <li>Other good practices that improve accessibility also make your site more usable by other groups, such as mobile phone users or those on low network speed. In fact, everyone can benefit from many such improvements.</li>
+          <li>Did we mention it is also the law in some places?</li>
+        </ul>
+      </section>
+
+      <section class="main-section" role="region" id="Semantic_HTML_Elements">
+        <header>Semantic HTML Elements</header>
+        <p>As you learn more about HTML — read more resources, look at more examples, etc. — you'll keep seeing a common theme: the importance of using semantic HTML (sometimes called POSH, or Plain Old Semantic HTML). This means using the correct HTML elements for their intended purpose as much as possible.</p>
+        <p>Semantic HTML doesn't take any longer to write than non-semantic (bad) markup if you do it consistently from the start of your project. Even better, semantic markup has other benefits beyond accessibility:</p>
+        <ol>
+          <li><span class="bold">Easier to develop with — </span>as mentioned above, you get some functionality for free, plus it is arguably easier to understand.</li>
+          <li><span class="bold">Better on mobile —</span> semantic HTML is arguably lighter in file size than non-semantic spaghetti code, and easier to make responsive.</li>
+          <li><span class="bold">Good for SEO —</span> search engines give more importance to keywords inside headings, links, etc. than keywords included in non-semantics, etc., so your documents will be more findable by customers.</li>
+        </ol>
+        <p>People sometimes write headings, paragraphs, etc. using line breaks and adding HTML elements purely for styling, something like the following:</p>
+        <div class="codeblock">
+          <pre>
+            <code><span class="tag">&lt;span style=</span>"font-size: 3em"<span class="tag">&gt;</span>My heading<span class="tag">&lt;/span&gt; &lt;br /&gt;&lt;br /&gt;</span>
+    This is the first section of my document.
+    <span class="tag">&lt;br /&gt;&lt;br /&gt;</span>
+    I'll add another paragraph here too.
+    <span class="tag">&lt;br /&gt;&lt;br /&gt;</span>
+    1. Here is
+    <span class="tag">&lt;br /&gt;&lt;br /&gt;</span>
+    2. a list for
+    <span class="tag">&lt;br /&gt;&lt;br /&gt;</span>
+    3. you to read
+    <span class="tag">&lt;br /&gt;&lt;br /&gt;
+    &lt;span style=</span>"font-size: 2.5em"<span class="tag">&gt;</span>My subheading<span class="tag">&lt;/span&gt;
+    &lt;br /&gt;&lt;br /&gt;</span>
+    This is the first subsection of my document. I'd love people to be able to find
+    this content!
+    <span class="tag">&lt;br /&gt;&lt;br /&gt;
+    &lt;span style=</span>"font-size: 2.5em"<span class="tag">&gt;</span>My 2nd subheading<span class="tag">&lt;/span&gt;
+    &lt;br /&gt;&lt;br /&gt;</span>
+    This is the second subsection of my content. I think is more interesting than
+    the last one.</code>
+          </pre>
+        </div>
+
+      </section>
+
+      <section class="main-section" role="region" id="HTML_Images">
+        <header>HTML Images</header>
+        <p>Whereas textual content is inherently accessible, the same cannot necessarily be said for multimedia content — image and video content cannot be seen by visually-impaired people, and audio content cannot be heard by hearing-impaired people. We cover video and audio content in detail in the Accessible multimedia, but for this article we'll look at accessibility for the humble <span class="tag">&lt;img&gt;</span> element.</p>
+        <p>We have a simple example written up, which features four copies of the same image:</p>
+      <div class="codeblock">
+        <pre>
+          <code><span class="tag">&lt;img src=</span>"dinosaur.png" <span class="tag">/&gt;
+
+      &lt;img src =</span>"dinosaur.png"
+      <span class="tag">alt=</span>"A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human,
+       with small arms, 
+      and a large head with lots of sharp teeth." <span class="tag">/&gt;
+
+
+      &lt;img src=</span>"dinosaur.png" <span class="tag">aria-labelledby=</span>"dino-label" <span class="tag">/&gt;
+
+
+      &lt;p id=</span>"dino-label"<span class="tag">&gt;</span>
+        The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like
+        a human, with small arms, and a large head with lots of sharp teeth.
+      <span class="tag">&lt;/p&gt;</span></code>
+        </pre>
+      </div>
+      <p>The <b>first image</b>, when viewed by a screen reader, doesn't really offer the user much help — VoiceOver for example reads out "/dinosaur.png, image". It reads out the filename to try to provide some help.</p>
+      <p>When a screen reader encounters the <b>second image</b>, it reads out the full <span class="tag">alt</span> attribute — "A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."</p>
+      <p>In this case of the <b>third image</b>, we are not using the <span class="tag">alt</span> attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an <span class="tag">id</span>, and then used the <span class="tag">aria-labelledby</span> attribute to refer to that <span class="tag">id</span>, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with <span class="tag">alt</span>.</p>
+      </section>
+      <section class="main-section" role="region" id="Styling_Links">
+        <header>Styling Links</header>
+        <p>Links (the <span class="tag">&lt;a&gt;</span> element with an href attribute), depending on how they are used, can help or harm accessibility. By default, links are accessible in appearance. They can improve accessibility by helping a user quickly navigate to different sections of a document. They can also harm accessibility if their accessible styling is removed or if JavaScript causes them to behave in unexpected ways.</p>
+        <p>By default, links are visually different from other text in both color and text-decoration, with links being blue and underlined by default, purple and underlined if visited, and with a focus-ring when they receive keyboard focus.</p>
+        <p>Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color (a <b>4.5:1</b> contrast). In addition, links should visually be significantly different from non-linking text, with a minimum contrast requirement of <b>3:1</b> between link text and surrounding text and between default, visited, and focus/active states and a <b>4.5:1</b> contrast between all those state colors and the background color.</p>
+        <h6 class="subheading">Link that opens a new tab or window</h6>
+        <div class="codeblock">
+          <pre>
+            <code><span class="tag">&lt;a target=</span>"_blank" <span class="tag">href=</span>"https://www.wikipedia.org/"<span class="tag">&gt;
+              </span>Wikipedia <span class="tag">&lt;span class="sr-only"&gt;</span>(opens in a new window)<span class="tag">&lt;/span&gt;&lt;/a&gt;</span>
+            </code>
+          </pre>
+        </div>
+
+        <h6 class="subheading">Link to a non-HTML resource</h6>
+        <div class="codeblock">
+          <pre>
+            <code><span class="tag">&lt;a target=</span>"_blank" <span class="tag">href=</span>"2017-annual-report.ppt"<span class="tag">&gt;</span>2017 Annual Report <span class="tag">&lt;span class="sr-only"&gt;</span>
+            (PowerPoint)<span class="tag">&lt;/span&gt;&lt;/a&gt;</span></code>
+          </pre>
+        </div>
+
+
+      </section>
+      <section class="main-section" role="region" id="Content_Highlighting">
+        <header>Content Highlighting</header>
+        <h6 class="subheading">Emphasized text</h6>
+        <p>Inline markup that confers specific emphasis to the text that it wraps:</p>
+        <div class="codeblock">
+          <pre>
+            <code><span class="tag">&lt;p&gt;</span>The water is <span class="tag">&lt;em&gt;</span>very hot<span class="tag">&lt;/em&gt;.&lt;/p&gt;</span>
+
+      <span class="tag">&lt;p&gt;</span>Water droplets collecting on surfaces is called <span class="tag">&lt;strong&gt;</span>condensation<span class="tag">&lt;/strong&gt;
+      &lt;/p&gt;</span></code>
+          </pre>
+        </div>
+        <div class="codeblock consecutive">
+          <pre>
+            <code><span class="tag">strong,em {</span>
+                color: #a60000;
+              <span class="tag">}</span></code>
+          </pre>
+        </div>
+        <p>You will however rarely need to style emphasis elements in any significant way. The standard conventions of bold and italic text are very recognizable, and changing the style can cause confusion.</p>
+        <h6 class="subheading">Color and color contrast</h6>
+        <p>When choosing a color scheme for your website, make sure that the text (foreground) color contrasts well with the background color. Your design might look cool, but it is no good if people with visual impairments like color blindness can't read your content.</p>
+        <p>There is an easy way to check whether your contrast is large enough to not cause problems. There are a number of contrast checking tools online that you can enter your foreground and background colors into, to check them. For example WebAIM's Color Contrast Checker is simple to use, and provides an explanation of what you need to conform to the WCAG criteria around color contrast.</p>
+      </section>
+      <section class="main-section" role="region" id="Screen_Reader_Accessible_Content">
+        <header>Screen Reader Accessible Content</header>
+        <p>There are many instances where a visual design will require that not all content is shown at once.</p>
+        <p>Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect because it doesn't stop screen readers from getting to it.
+
+On the other hand, you shouldn't use <span class="tag">visibility:hidden</span> or <span class="tag">display:none</span>, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.</p>
+      </section>
+      <section class="main-section" role="region" id="Screen_Reader_Only_Content">
+        <header>Screen Reader Only Content</header>
+        <p>There are occasional instances where content should be made available to screen reader users but hidden from sighted users. In the vast majority cases, content that is available visually should be available to screen reader users, and vice versa. Verbose cues or instructions that are only read by screen reader users usually do more harm than good. However, there are a few cases where information or meaning is apparent visually but may not be apparent to screen reader users. In these rare cases, it may be appropriate to cause content to be read by a screen reader, but have the content remain invisible to sighted users.</p>
+        <div class="codeblock">
+          <pre>
+            <code>
+    HTML:
+              
+    <span class="tag">&lt;div class=</span>"sr-only"<span class="tag">&gt;</span>This text is hidden.<span class="tag">&lt;/div&gt;</span>
+            
+    CSS:
+            
+    <span class="tag">.sr-only {</span>
+      position:absolute;
+      left:-10000px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    <span class="tag">}</span>
+            </code>
+          </pre>
+        </div>
+       </section>
+       <section class="main-section" role="region" id="Reference">
+        <header>Reference</header>
+        <p>The documentation on this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web" class="link" >MDN</a></p>
+       </section>
+
+    </main>
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,245 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  :root {
+    --backgroundwhite: #ebebed;
+    --blue: #13102E;
+    --red: #57423f;
+    --green:#3f5742;
+    --greentile: #102c13;
+    --hoverblue:#2a2742;;
+    /* #2a2742; */
+    --activeblue: #423f57;
+  }
+  
+  *,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:var(--backgroundwhite);
+  }
+  
+  html {
+    font-size: 7vw;
+  }
+  
+  body {
+    font-family: optima,sans-serif;
+    background-color: var(--backgroundwhite);
+    
+  }
+  
+  header,main {
+    width: 100%;
+    min-width: 140px;
+  }
+  
+  header {
+    background-color: var(--blue);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0.5em;
+  }
+  
+  #navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .nav-link {
+    padding: 0.55em;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 0.5rem;
+  }
+  
+  .nav-link:hover {
+    background-color: var(--hoverblue);
+    cursor: pointer;
+  }
+  .nav-link:active {
+    background-color: var(--activeblue);
+    cursor: pointer;
+  }
+  
+  section {
+    min-height: 100vh;
+  
+  }
+  
+  #welcome-section {
+    background-color: var(--red);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+
+  
+  #welcome-section p {
+    font-size: 0.5em;
+  }
+  
+  #welcome-section h1,p {
+    padding: 0.5em;
+  }
+  
+  #projects {
+    background-color: var(--green);
+    padding: 1rem;
+  }
+  /* .project-tile {
+    min-height: 100vh;
+  } */
+
+  section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2em;
+  }
+
+  .project-tiles {
+    display: flex;
+    flex-direction: column;
+    
+
+  }
+  .project-tile {
+    min-height: 90vh;
+    border: 0.02rem black solid;
+    border-radius: 0.5rem;
+    background-color: var(--greentile);
+    display: flex;
+    align-items: flex-end;
+    margin: 1rem 1rem;
+  }
+
+  .project-tiles a {
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+
+  .project-tiles a:hover {
+    box-shadow: 0 0 0.1rem 0.2rem var(--hoverblue);
+    transition: box-shadow 0.25s;
+  }
+
+  .project-tiles a:active {
+    box-shadow: 0 0 0.3rem 0.75rem var(--hoverblue);
+    transition: box-shadow 0.25s;
+  }
+
+  .project-tiles .one{
+    background-image: url("images/p1.png");
+  }
+
+  .project-tiles .two{
+    background-image: url("images/p2.png");
+  }
+
+  .project-tiles .three{
+    background-image: url("images/p4.png");
+  }
+
+  .project-tiles .four{
+    background-image: url("images/p3.png");
+  }
+
+  .project-tile {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.project-title {
+    background-color: var(--blue);
+    text-align: center;
+    min-width: 100%;
+    padding: 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    
+  }
+
+  #contact {
+    background: var(--hoverblue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .accounts {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+    row-gap: 1rem;
+  }
+
+  i::before {
+    margin-right: 0.5rem;
+  }
+
+  #contact a {
+    text-decoration: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    color:rgb(101, 81, 156);
+  }
+  #contact a:hover{
+    cursor: pointer;
+    background-color: #242233;
+  }
+
+  #contact a:active{
+    cursor: pointer;
+    background-color: var(--blue);
+
+
+  }
+
+
+
+
+  @media only screen and (min-width: 650px){
+    html {
+      font-size: 3vw;
+    }
+  }
+
+  @media only screen and (min-width: 767px){
+    .project-tiles {
+      /* flex-direction: row; */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 100%;
+      column-gap: 1rem;
+      font-size: 0.5rem;
+    }
+    .project-tile {
+      margin: 0;
+    }
+
+    .accounts{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      padding: 1rem;
+    }
+  }
+  
+
+  @media only screen and (min-width: 1024px){
+    .nav-link {
+      padding: 1em;
+    }
+  }
+  

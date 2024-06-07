@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f5f3f0;
+  
+  }
+  html {
+    font-size: 8.5vw;
+  }
+  body {
+    background-color: #13102e;
+  }
+  html, body {
+      min-width: 100%;
+      overflow-x: hidden;
+  }
+  
+  main, .border {
+    display: inline-block !important;
+    position: absolute;
+  }
+  
+  #navbar {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24vw;
+    min-width: 24vw;
+    font-size: 0.65em;
+    background-color: #13102e;
+    min-height: 100%;
+  }
+  
+  .border {
+    width: 0.6vw;
+    min-height: 100%;
+    background-color: rgb(178, 178, 178);
+    position: fixed;
+    top: 0;
+    left: 24vw;
+    z-index: 1;
+  }
+  
+  main {
+    padding: 1em;
+    top: 0;
+    left: 24.5vw;
+    /* width: 75.5vw; */
+    background-color: #090817;
+  }
+  
+  .nav-link, #navbar header {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-top: 0.02rem solid #f5f3f0;
+  }
+  #navbar header {
+    font-size: 1.5em;
+    padding: 1em;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+  
+  
+  .nav-link {
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #ff839e;
+  }
+  .link {
+    text-decoration: none;
+    color: #ff839e;
+  }
+  
+  .nav-link:last-of-type {
+    border-bottom: 0.02rem solid #f5f3f0;
+  }
+  
+  .nav-link:hover {
+    background-color:#423f57;
+    color: white;
+    cursor: pointer;
+  }
+  .nav-link:active {
+    background-color:#59576c;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .main-section header {
+    padding: 1rem 0.5rem;
+    font-weight: 600;
+  }
+  
+  .main-section header::after {
+    content: ":"
+  }
+  .main-section p{
+    font-size: 0.6rem;
+    padding: 0.5rem 0.4rem;
+    line-height: 1rem;
+  }
+  
+  .subheading {
+    padding: 1rem 0px;
+    margin-left: 5px;
+  }
+  
+  .main-section ul,.main-section ol {
+    padding: 1rem 1.25rem;
+    line-height: 1.25rem;
+    font-size: 0.53rem;
+  }
+  
+  .main-section ul > li , .main-section ol > li {
+    padding: 0.3rem 0;
+    margin-left: 0.5rem;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .main-section pre {
+    white-space: prewrap;
+  }
+  
+  .codeblock {
+    background-color: #2a2742;
+    border-radius: 1rem;
+    padding: 1rem 0;
+    margin-left: 0.5rem;
+    font-size: 0.5rem;
+    min-width: 450px;
+  }
+  .codeblock code ,.tag {
+    font-family: 'Lucidia Console', monospace;
+    overflow: hidden;
+  }
+  
+  
+  code span.tag {
+    font-size: 0.5rem;
+    color: #1a8cd9;
+  }
+  
+   p span.tag {
+    font-size: 0.4rem;
+    background-color: #59576c;
+    color: white;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+  .consecutive {
+    margin: 1.5rem 0.5rem 0 ;
+  }
+
+  @media only screen and (min-width: 650px){
+    html {
+      font-size: 2.25vw;
+    }
+  }
+  
+  
+  

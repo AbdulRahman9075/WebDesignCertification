@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>S23-Survey</title>
+  <link rel="stylesheet" href="styles1.css"/>
+</head>
+  
+<body>
+  <h1 id="title">Spring 2023--SurveyForm</h1>
+  <p id="description"><em>Complete the form to Register Yourself!</em></p>
+
+  <form id="survey-form" method="post" action="">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label id="name-label" for="name">Name: <input id="name" type="text" placeholder="your full name" required/></label>
+      <label id="email-label" for="email">University Email: <input id="email" type="email" placeholder="your email" required/></label>
+      <label id="number-label" for="number">Age: <input id="number" type="number" placeholder="your age" min=16 max=25></label>
+      <label for="dropdown">Your Semester in S23: <select id="dropdown">
+          <option name="snum" value="2">2</option>
+          <option name="snum" value="4">4</option>
+          <option name="snum" value="6">6</option>
+          <option name="snum" value="8">8</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Means of transportation this semester: </legend>
+      <label for="transport"><input id="transport" name="choice" type="radio" value=1 checked/> University Point</label>
+      <label for="transport"><input id="transport" name="choice" type="radio" value=2/> Carpool</label>
+      <label for="transport"><input id="transport" name="choice" type="radio" value=3/> Other</label>
+      <label for="transport">Please Specify: <input id="transport" name="choice" type="text"/></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Choose Electives (if applicable, TWO only)</legend>
+      <label for="elective"><input id="elective" type="checkbox" name="e420" value=420 /> Psychology (4th)</label>
+      <label for="elective"><input id="elective" type="checkbox" name="e423" value=423 /> Management (4th)</label>
+      <label for="elective"><input id="elective" type="checkbox" name="e421" value=421 /> Marketing (4th)</label>
+      <label for="elective"><input id="elective" type="checkbox" name="e61" value=61 /> Firmware and Security (6th)</label>
+      <label for="elective"><input id="elective" type="checkbox" name="e62" value=62 /> Economics (6th)</label>
+      <label for="elective"><input id="elective" type="checkbox" name="e63" value=63 /> Creativity (6th)</label>
+      <label for="elective"><input id="elective" type="checkbox" name="e810" value=810 /> DevOps (8th)</label>
+      <label for="elective"><input id="elective" type="checkbox" name="e811" value=811 /> Requirements Engineering (8th)</label>
+      <label for="elective"><input id="elective" type="checkbox" name="e831" value=831 /> Professional Practices (8th)</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Add any additional information</legend>
+      <textarea id="addons" rows=6 cols=57></textarea>
+    </fieldset>
+
+    <input id="submit" type="submit" value="Submit">
+
+  </form>
+</body>
+
+</html>
